@@ -1,6 +1,10 @@
 // conditional statements ==> statements along with conditions.
 // statements ==> Line of Code.
 
+// (condition){
+//statements
+// }
+
 // (condition) {
 // console.log("Line 1");
 // console.log("Line 2");
@@ -12,11 +16,16 @@
 
 // condiiton --> if this condition is true then only it will execute these line of code otherwise it will skip it.
 
+//Conditional Statements ==> Statements along with conditions
+//what is statement ? Statement meaning line of code. 
 
 
 
+//There are two different types of conditional statements that are available. 
+//1. if else conditional statement ==> Will be used when we Don't know the result of condition before itself. 
+//2. switch case conditional statement ==> Will be used when we know the result of condition. Now we want to choose one option among multiple. 
 
-
+//1. if else conditional statement ==> Will be used when we Don't know the result of condition before itself. 
 let percentage: number = 91;
 if (percentage > 75) {
     console.log("You got the Distinction");
