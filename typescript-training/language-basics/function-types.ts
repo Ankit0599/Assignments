@@ -49,4 +49,29 @@ console.log ("Virat");
 console.log (currentYear());
 
 
-// 3. Anonymous function
+// 3. Anonymous function ==> a function that is defined without name.These anonymous fucntion are regularly used as parameters for other functions.
+
+//syntax:
+
+// function outerfunction (function parameter) : RETURN TYPE {
+//     statements
+// }
+
+
+// function with string parameter
+function printName (name : string) : void {
+    console.log (name);
+}
+
+//calling the function
+printName ("Ankit");
+
+
+//function with function parameter
+
+function run (greet : (name : string) => void ): void {
+    greet ("Ankit");
+}
+
+//calling the function
+run (printName);
