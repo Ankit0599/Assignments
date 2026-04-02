@@ -8,9 +8,9 @@
 
 console.log (" Original String Sentence : Java programming is fun and challenging");
 
-const sentence : string [] = "Java programming is fun and challenging";
+const sentence : string = "Java programming is fun and challenging";
 
-const words : string [] = sentence.split(" ");
+const words : string = sentence.split(" ");
 
 // 1. Count the total number of words in the sentence.
 console.log (" 1. Count the total number of words in the sentence : ")
@@ -19,7 +19,7 @@ console.log (" Total number of words in this sentence are : " + words.length)
 
 // 2. Print the sentence words in reverse order.
 console.log (" 2. Print the sentence words in reverse order : ")
-let reverseSentence : string [] = " ";
+let reverseSentence : string = " ";
 for (let i : number = words.length - 1 ; i>=0 ; i--) {
     reverseSentence = reverseSentence + words [i] + " " ;
 }

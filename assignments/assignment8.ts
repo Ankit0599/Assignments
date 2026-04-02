@@ -6,9 +6,9 @@
 // String paragraph = "Java is a popular programming language. Java is used for web
 // development, mobile applications, and more.";
 
-const paragraph : string [] = "Java is a popular programming language. Java is used for web development, mobile applications, and more.";
+const paragraph : string = "Java is a popular programming language. Java is used for web development, mobile applications, and more.";
  
-const words : string [] = paragraph.split(" ");
+const words : string = paragraph.split(" ");
 
 //get the count and index of java word
 

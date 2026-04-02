@@ -95,3 +95,45 @@ console.log (" 12. Extract Specific part of the string from the dynamic text : "
 let splitedValues : string [] = originalString.split(" ");
 console.log (splitedValues[3]);
 console.log (splitedValues[7]);
+
+//13. Compare two different strings
+//=== --> operater for strict equality (comparing both value and data type)
+//==  --> Operator for loose equality (comparing value only, performs type coercion)(case-sensitive)
+//e.g., -> 10 == "10" --> true
+// 10 === "10" --> false
+//includes() method for Substring Check (case-sensitive)
+//startsWith() and endsWith() methods for Prefix/Suffix Check (case-sensitive)
+
+// "10" --> can not perform mathematical operation when we are going to use double quotation on numbers.
+
+
+console.log ("13. Compare two different strings : ");
+let string1 : string = "Hello, World!";
+let string2 : string = "hello, world!";
+console.log ("using === Operator : " + (string1 === string2));
+console.log ("using == Operator : " + (string1 == string2));
+let string3 : string = "100"; //string
+let numbervalue : number = 100; // number
+console.log ("Using === Operator : " + (numbervalue===string3));
+console.log ("Using == Operator : " + (numbervalue==string3));
+
+let string4 : string = "Typescript";
+console.log ("Typescript includes 'Script' : " + string4.includes("Script"));
+console.log ("Typescript includes 'Script' : " + string4.includes("script"));
+console.log ("Typescript starts with 'Type' : " + string4.startsWith("Type"));
+console.log ("Typescript ends with 'Script' : " + string4.endsWith("Script"))
+
+
+//14. Data conversions
+//Converting other data type to string 
+console.log ("14. Data conversions : ");
+let stdCode : number = 144;
+let phonenumber : number = 325325;
+let stdCodeString : string = String (stdCode);
+console.log (stdCodeString + phonenumber);
+
+//Converting string to other data type
+let balance  : string = "Account balance is 19,999.99 rupees";
+balance = balance.replace(/[^0-9.]/g,"");
+let bal : number  = parseFloat (balance);
+console.log (bal>10000);
