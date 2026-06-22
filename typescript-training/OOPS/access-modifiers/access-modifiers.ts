@@ -51,7 +51,7 @@ class Project {
         console.log ("Accessing members outside of the class : ");
         let obj = new Person();
         console.log (obj.name);
-        console.log (obj.Age);
+        // console.log (obj.Age);
         console.log (obj.getSalary());
 
         obj.setPancard("ABCDSE13245");
@@ -68,8 +68,8 @@ class Employee extends Person {
         console.log ("Accessing members in the child class : ");
         let obj = new Person();
         console.log (obj.name);
-        console.log (obj.Age);
-        console.log (obj.Salary);
+        // console.log (obj.Age);
+        // console.log (obj.Salary);
     }
 
 }
