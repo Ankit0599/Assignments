@@ -10,6 +10,6 @@
     "preferencesSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonPreferences",
     "statisticsSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonStatistics",
     "marketingSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonMarketing",
-    "showResultsLink" : "a#CybotCookiebotDialogBodyEdgeMoreDetailsLink",
+    "showDetailsLink" : "a#CybotCookiebotDialogBodyEdgeMoreDetailsLink",
     "cookiePopUpExpandedView" : "a#CybotCookiebotDialogNavDetails"
 }

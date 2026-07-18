@@ -27,7 +27,7 @@ export class WebCommons {
     }
 
     //common method to click on the web element
-    async clickToElement(selectors:string){
+    async clickElement(selectors:string){
         await this.scrollToElement(selectors);
         await this.element(selectors).click();
     }
