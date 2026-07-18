@@ -1,11 +1,13 @@
-import {test, expect} from "@playwright/test";
+import {test, expect, TestInfo} from "@playwright/test";
 import CookiesPageSteps from '../../page-objects/page-steps/cookies-page-steps';
 import HomePageSteps from '../../page-objects/page-steps/home-page-steps';
 import LoginPageSteps from '../../page-objects/page-steps/login-page-steps';
+import data from '../../testdata/ui/data.json';
 
 let loginPage : LoginPageSteps;
 let HomePage : HomePageSteps;
 let CookiePage : CookiesPageSteps;
+let testdata: any;
 
 test.describe('Application Test', () => {
 
@@ -22,10 +24,11 @@ test.describe('Application Test', () => {
             await CookiePage.verifyCookiesPageIsDisplayed();
     });
 
-    test ('Test Case 2 : To verify Cookies popup content is displayed', async () => {
+    test ('Test Case 2 : To verify Cookies popup content is displayed', async ({}, testinfo : TestInfo) => {
+        testdata = data[testinfo.title as keyof typeof data];
             await loginPage.launchApplication();
             await CookiePage.verifyCookiesPageIsDisplayed();
-            await CookiePage.verifyCookiesContent("abc");
+            await CookiePage.verifyCookiesContent(testdata["expectedContent"]);
     });
 
     test ('Test Case 3 : To verify Cookies popup Logo is displayed', async () => {
@@ -62,24 +65,38 @@ test.describe('Application Test', () => {
             await CookiePage.verifyCookiesPopUpIsClosed();
     });
 
-    test ('Test Case 8 : To verify user is able to login successfully with valid credentials', async () => {
+    test ('Test Case 8 : To verify user is able to login successfully with valid credentials', async ({}, testinfo : TestInfo) => {
+            testdata = data[testinfo.title as keyof typeof data];
             await loginPage.launchApplication();
+            await CookiePage.verifyCookiesPageIsDisplayed();
+            await CookiePage.verifyCookiesPopUpSelectionButton();
+            await CookiePage.clickOnCookiesSelectionButton("Allow All");
+            await CookiePage.verifyCookiesPopUpIsClosed();
             await loginPage.verifyLoginPageIsDisplayed();
-            await loginPage.enterUsernamePassword(" ", " ");
+            await loginPage.enterUsernamePassword(testdata["username"], testdata["password"]);
             await loginPage.clickOnLoginButton();
             await HomePage.verifyHomePageIsDisplayed();
     });
 
-    test ('Test Case 9 : To verify Error message is displayed for invalid login attempt', async () => {
+    test ('Test Case 9 : To verify Error message is displayed for invalid login attempt', async ({}, testinfo : TestInfo) => {
+            testdata = data[testinfo.title as keyof typeof data];
             await loginPage.launchApplication();
+            await CookiePage.verifyCookiesPageIsDisplayed();
+            await CookiePage.verifyCookiesPopUpSelectionButton();
+            await CookiePage.clickOnCookiesSelectionButton("Allow All");
+            await CookiePage.verifyCookiesPopUpIsClosed();
             await loginPage.verifyLoginPageIsDisplayed();
-            await loginPage.enterUsernamePassword(" ", " ");
+            await loginPage.enterUsernamePassword(testdata["username"], testdata["password"]);
             await loginPage.clickOnLoginButton();
             await loginPage.verifyInvalidLoginErrorMessageisDisplayed();
     });
 
     test ('Test Case 10 : To verify forgot password functionality within the login page', async () => {
             await loginPage.launchApplication();
+            await CookiePage.verifyCookiesPageIsDisplayed();
+            await CookiePage.verifyCookiesPopUpSelectionButton();
+            await CookiePage.clickOnCookiesSelectionButton("Allow All");
+            await CookiePage.verifyCookiesPopUpIsClosed();
             await loginPage.verifyLoginPageIsDisplayed();
             await loginPage.clickOnForgotPasswordLink();
             await loginPage.verifyForgotPasswordConfirmationMessageIsDisplayed();
@@ -87,14 +104,23 @@ test.describe('Application Test', () => {
 
     test ('Test Case 11 : To verify social media icons within the login page', async () => {
             await loginPage.launchApplication();
+            await CookiePage.verifyCookiesPageIsDisplayed();
+            await CookiePage.verifyCookiesPopUpSelectionButton();
+            await CookiePage.clickOnCookiesSelectionButton("Allow All");
+            await CookiePage.verifyCookiesPopUpIsClosed();
             await loginPage.verifyLoginPageIsDisplayed();
             await loginPage.verifySocialMediaLoginOptions();
     });
 
-    test ('Test Case 12 : To verify logout functionality within the login page', async () => {
+    test ('Test Case 12 : To verify logout functionality within the login page', async ({}, testinfo : TestInfo) => {
+            testdata = data[testinfo.title as keyof typeof data];
             await loginPage.launchApplication();
+            await CookiePage.verifyCookiesPageIsDisplayed();
+            await CookiePage.verifyCookiesPopUpSelectionButton();
+            await CookiePage.clickOnCookiesSelectionButton("Allow All");
+            await CookiePage.verifyCookiesPopUpIsClosed();
             await loginPage.verifyLoginPageIsDisplayed();
-            await loginPage.enterUsernamePassword(" ", " ");
+            await loginPage.enterUsernamePassword(testdata["username"], testdata["password"]);
             await loginPage.clickOnLoginButton();
             await HomePage.verifyHomePageIsDisplayed();
             await HomePage.clickOnLogOutButton();
