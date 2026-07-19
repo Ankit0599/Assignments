@@ -4,10 +4,10 @@
    "passwordTextBox" : "input[aria-label='Password']",
    "forgotPasswordLink" : "a.forgot-password-link",
    "forgotPasswordCOnfirmationMsg" : "//span[text()='Almost done!']",
-   "loginButton" : "//span[text() = ' LOG IN ']",
+   "loginButton" : "//span[text()=' LOG IN ']",
    "loginErrorMessage" : "//div[contains(text(), 'Invalid email or password')]",
    "linkdinIcon" : "img.icon-LinkedIn",
    "googleIcon" : "img.icon-google",
-   "signUpLink" : "//span[text() = ' SIGN UP ']"
+   "signUpLink" : "//span[text()=' SIGN UP ']"
 
 }

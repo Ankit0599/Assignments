@@ -6,7 +6,7 @@
     "denyButton" : "button#CybotCookiebotDialogBodyButtonDecline",
     "creatioLogo" :"img#CybotCookiebotDialogPoweredbyImage",
     "cookieBotLogo" : "a#CybotCookiebotDialogPoweredbyCybot",
-    "neccesarySwitchButton" : "//strong[text() = 'Necessary ']",
+    "neccesarySwitchButton" : "//strong[text()='Necessary ']",
     "preferencesSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonPreferences",
     "statisticsSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonStatistics",
     "marketingSwitchButton" : "input#CybotCookiebotDialogBodyLevelButtonMarketing",
