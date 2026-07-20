@@ -16,6 +16,9 @@ R refers Read  ==> SELECT
 U refers Update ==> ALTER , UPDATE
 D refers Delete  ==> DROP , DELETE
 
+Alter => (DDL -> Data Definition Language - structure)
+Update => (DML -> Data Manupulation Langugae - Data)
+
 # Datatypes in SQL (PostgreSQL)  ==> ColumnName DataType Constraint
 
 ## Numeric Types
