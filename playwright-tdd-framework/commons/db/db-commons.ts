@@ -1,17 +1,17 @@
 import {Client} from "pg";
-import Config from '../../config/config.json';
+import config from '../../config/config.json';
 
-export class DBcommons {
+export class DBCommons {
 
     async getData (query : string) : Promise<Array<Record<string,string>>>{
 
         //Create a new client instance configuration to connect with the database.
         const dbConfig = new Client({
-            host : Config.db.host,
-            port : Config.db.port,
-            user : Config.db.user,
-            password : Config.db.password,
-            database : Config.db.database
+            host : config.db.host,
+            port : config.db.port,
+            user : config.db.user,
+            password : config.db.password,
+            database : config.db.database
         })
 
         //Connect to the database
