@@ -7,10 +7,10 @@
     },
     "db":{
         "host": "localhost",
-        "port" : 3306,
-        "user": "root",
-        "password": "BharatTechAcedemy#1234",
-        "database":"testdb"
+        "port" : 5432,
+        "user": "postgres",
+        "password": "Ankit@0507",
+        "database":"dvdrental"
     },
     "api":{
         "baseurl": "https://jsonplaceholder.typicode.com",
