@@ -21,7 +21,7 @@ Update => (DML -> Data Manupulation Langugae - Data)
 
 # Datatypes in SQL (PostgreSQL)  ==> ColumnName DataType Constraint
 
-## Numeric Types
+## Numeric Types ==>
 smallint  ==> 2 bytes ==> -32768 to +32767 
 integer ==> 4 bytes ==> -2147483648 to +2147483647
 bigint ==> 8 bytes ==> -19 digit to +19 digit
@@ -34,15 +34,15 @@ smallserial ==> only positive integers from 1 to 32767
 serial ==> only positive integers from 1 to 2147483647
 bigserail ==>only positive integers from 1 to +19 digit number
 
-## Char Types
+## Char Types ==>
 char(n) ==> Fixed number of characters to be stored within the database table column 
 varchar(n) ==> Variable number of characters to be stored within the database table column 
 text ==> Unlimited characters to be stored within the database table column 
 
-## Boolean Types
+## Boolean Types ==>
 boolean ==> true/false
 
-## Date and Time 
+## Date and Time ==>
 date ==> Date refers only to date. 
 time ==> Time refers only to time. 
 timestamp ==> Timestamp refers to date and time together. 
@@ -50,15 +50,15 @@ interval ==> Interval refers to the period in minutes, hours, days, months, year
 
 # Operators in SQL 
 
-## Arithmetic operators 
+## Arithmetic operators ==>
 Arithmetic operators are nothing but the operators used in mathematical operations. 
 +,-,*,/,% (modulus)
 
-## Comparison operators 
+## Comparison operators ==> 
 Comparison operators are nothing but the operators used to compare two different values. 
 =,!=, >, <, >=, <= etc..
 
-## Logical Operators 
+## Logical Operators ==>
 AND ==> Combines two or more conditions and returns true only if all conditions are true. 
 OR ==> Combines two or more conditions and returns true only if any one condition is true. 
 NOT ==> Negates a condition and returns opposite result 
