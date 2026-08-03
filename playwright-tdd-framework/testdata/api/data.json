@@ -1,0 +1,27 @@
+{
+    "duplicateRepo" : {
+        "requestType" : "POST",
+        "endpoint" : "/user/repos",
+        "Body" : {
+            "name" : "TestEnv",
+            "description" : "A Framework for testing with Playwright and TDD approach",
+            "private" : true
+        },
+        "expectedStatusCode" : 422,
+        "expectedStatusMessage" : "Unprocessable Entity",
+        "expectedErrorMessage" : "Repository creation failed."
+    },
+
+        "validRepo" : {
+        "requestType" : "POST",
+        "endpoint" : "/user/repos",
+        "Body" : {
+            "name" : "Playwright-TDD-Framework",
+            "description" : "A Framework for testing with Playwright and TDD approach",
+            "private" : true
+        },
+        "expectedStatusCode" : 201,
+        "expectedStatusMessage" : "Created",
+        "expectedRepoName" : "Playwright-TDD-Framework"
+    }
+}
