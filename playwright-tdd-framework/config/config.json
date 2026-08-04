@@ -14,8 +14,8 @@
     },
     "api":{
         "baseurl": "https://api.github.com",
-        "owner" : "Ankit0599",
-        "token" : "Bearer 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"
+        "owner" : "ankitjeure927-oss",
+        "token" : "Bearer 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"
     },
     "ollama":{
         "baseurl": "https://jsonplaceholder.typicode.com",
