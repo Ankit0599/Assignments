@@ -95,3 +95,4 @@ export class ApiCommons {
 
 }
 
+//Method to get the response body
