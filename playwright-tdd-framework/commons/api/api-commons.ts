@@ -95,4 +95,4 @@ export class ApiCommons {
 
 }
 
-//TEsting git 
+//Method to get the response body
