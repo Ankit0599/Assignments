@@ -68,7 +68,7 @@ Within this test plan, now we can add:
 - listeners
 - configuration elements, etc.
 
-![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## What is Thread Group? Different options need to be updated within the Thread Group Template ?
 Adding the Thread Group is the starting step of performance testing by using JMeter. 
@@ -77,7 +77,7 @@ Test Group in JMeter represents a group of virtual users (threads) that can exec
 Adding Thread group inside the test plan :
 
 Right click on test plan => Add => Threads(users)  => Thread Group
-![alt text](image.png)
+![alt text](image-1.png)
 
 Different components of Thread Group :
 
