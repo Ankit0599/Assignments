@@ -124,7 +124,7 @@ There are multiple types of samplers available in the JMeter tool.
 ## How to add a sampler to send an API request and validate the performance of the API request? 
 Right click on the Thread group => HTTP request template will be displayed ==> We should update API request details within the HTTP request template
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 
 ## What is the config elements in JMeter? 
@@ -143,7 +143,7 @@ Why are assertions important?
 - It can catch the failures. 
 - It can validate response data. 
 
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 Different types of assertions available in JMeter 
 
