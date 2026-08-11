@@ -68,7 +68,7 @@ Within this test plan, now we can add:
 - listeners
 - configuration elements, etc.
 
-![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## What is Thread Group? Different options need to be updated within the Thread Group Template ?
 Adding the Thread Group is the starting step of performance testing by using JMeter. 
@@ -77,7 +77,7 @@ Test Group in JMeter represents a group of virtual users (threads) that can exec
 Adding Thread group inside the test plan :
 
 Right click on test plan => Add => Threads(users)  => Thread Group
-![alt text](image.png)
+![alt text](image-1.png)
 
 Different components of Thread Group :
 
@@ -124,7 +124,7 @@ There are multiple types of samplers available in the JMeter tool.
 ## How to add a sampler to send an API request and validate the performance of the API request? 
 Right click on the Thread group => HTTP request template will be displayed ==> We should update API request details within the HTTP request template
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 
 ## What is the config elements in JMeter? 
@@ -143,7 +143,7 @@ Why are assertions important?
 - It can catch the failures. 
 - It can validate response data. 
 
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 Different types of assertions available in JMeter 
 
