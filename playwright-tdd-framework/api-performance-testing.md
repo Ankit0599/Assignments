@@ -151,7 +151,7 @@ Response Assertion
 JSON Assertion 
 Size Assertion 
 
-## Listeners in JMeter 
+## Listeners in JMeter =>
 Listeners are the components in JMeter that can record the test results of your performance testing. 
 
 Ex:
@@ -165,7 +165,7 @@ Different types of logical controller if you see,
 - if controller => Execute request only if condition is true. 
 - Loop Controller => How many times do we want to run the request? 
 
-## Pre-processor and post-processor 
+## Pre-processor and post-processor =>
 Pre-processor is a component that is going to execute before a sampler request is sent. 
 
 Ex: JSR223 PreProcessor
