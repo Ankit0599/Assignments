@@ -68,7 +68,7 @@ LIKE ==> Filter rows based on the pattern matching with % (percentile) and _ (un
 IS NULL ==> Filters rows where column contains null value 
 EXISTS ==> Check if subquery returns any rows. Based on that, it is going to filter the records from the main table. 
 
-# Constraints 
+# Constraints =>
 Conditions added on top of the database columns are treated as constraints. 
 NOT NULL ==> The column having a NOT NULL constraint won't allow null values. 
 UNIQUE ==> The column having a UNIQUE constraint won't allow duplicate values. 
