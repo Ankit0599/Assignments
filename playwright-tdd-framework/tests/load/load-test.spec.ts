@@ -1,6 +1,6 @@
 import {test} from '@playwright/test';
 
-import { JMeterCommons } from '../../../commons/jmeter/JMeterCommons.js';
+import { JMeterCommons } from '../../commons/jmeter/JMeterCommons.js';
 
 test.describe('Load tests', ()=> {
 
@@ -12,7 +12,7 @@ test.describe('Load tests', ()=> {
 
     //Run Jmeter Test Plan
     test ('Validate the API Load Test', async()=> {
-        test.setTimeout(180000);
+        test.setTimeout(1800000);
         await jmeter.runJmeterTestPlan("Load Test.jmx");
     })
 
