@@ -32,7 +32,7 @@
             </elementProp>
             <elementProp name="APITokens" elementType="Argument">
               <stringProp name="Argument.name">APITokens</stringProp>
-              <stringProp name="Argument.value">Bearer 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</stringProp>
+              <stringProp name="Argument.value">Bearer your_github_token_here</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -55,6 +55,8 @@
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">30000</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -94,6 +96,8 @@ var.put(&quot;currentTime&quot;, timestamp.toString());</stringProp>
           <stringProp name="HTTPSampler.method">PATCH</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">30000</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">

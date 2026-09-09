@@ -34,7 +34,7 @@
             </elementProp>
             <elementProp name="APITokens" elementType="Argument">
               <stringProp name="Argument.name">APITokens</stringProp>
-              <stringProp name="Argument.value">Bearer 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</stringProp>
+              <stringProp name="Argument.value">Bearer your_github_token_here</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
