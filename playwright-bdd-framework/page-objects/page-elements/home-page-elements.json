@@ -1,0 +1,6 @@
+{
+    "homePageHeaderLink" : "span:text-is('Application Hub')",
+    "userLinks" : "span:text-is('User Links')",
+    "profile": "img[alt = 'Contact photo']",
+    "logOutLink": "//span[text()='Log out']"
+}

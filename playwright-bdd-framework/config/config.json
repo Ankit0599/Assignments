@@ -1,0 +1,25 @@
+{
+    "app":{
+        "url" : "https://accounts.creatio.com/login/alm",
+        "title" : "Login | Creatio",
+        "username": "ankitjeure927@gmail.com",
+        "password":"AnkitJeure@9278"
+    },
+    "db":{
+        "host": "localhost",
+        "port" : 5432,
+        "user": "postgres",
+        "password": "Ankit@0507",
+        "database":"dvdrental"
+    },
+    "api":{
+        "baseurl": "https://api.github.com",
+        "owner" : "ankitjeure927-oss",
+        "token" : "Bearer your_github_token_here"
+    },
+    "ollama":{
+        "baseurl": "https://jsonplaceholder.typicode.com",
+        "endpoint":"/posts",
+        "token" : "your_ollama_token_here"   
+    }
+}
