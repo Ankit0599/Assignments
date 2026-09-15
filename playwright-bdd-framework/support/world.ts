@@ -25,8 +25,8 @@ class PlaywrightWorld extends World {
 export type CustomWorld = PlaywrightWorld;
 setWorldConstructor(PlaywrightWorld);
 
-//World : World is a class provided by Cucumber.js that represents the context in which your step definitions are executed. It allows you to share state and data between different steps in a scenario. By creating a custom World class, you can define properties and methods that will be available to all your step definitions.
-//IWorldOptions: IWorldOptions is an interface provided by Cucumber.js that defines the options that can be passed to the World constructor. It allows you to access scenario-specific data and configuration within your custom World class.
-//setWorldConstructor: setWorldConstructor is a function provided by Cucumber.js that allows you to set your custom World class as the constructor for the World. This ensures that your custom World class is used for all scenarios, providing a consistent context for your step definitions.
+//World => World is a class provided by Cucumber.js that represents the context in which your step definitions are executed. It allows you to share state and data between different steps in a scenario. By creating a custom World class, you can define properties and methods that will be available to all your step definitions.
+//IWorldOptions => IWorldOptions is an interface provided by Cucumber.js that defines the options that can be passed to the World constructor. It allows you to access scenario-specific data and configuration within your custom World class.
+//setWorldConstructor => setWorldConstructor is a function provided by Cucumber.js that allows you to set your custom World class as the constructor for the World. This ensures that your custom World class is used for all scenarios, providing a consistent context for your step definitions.
 
 //cucumber.cjs => setWorldConstructor => World => IWorldOptions => PlaywrightWorld => initializePageObjects => loginPageSteps, cookiesPageSteps, homePageSteps
