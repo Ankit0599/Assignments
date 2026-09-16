@@ -16,7 +16,7 @@
     1. package.json ==>   "type":"module"
     2. tsconfig.json ==> "verbatimModuleSyntax": false
 
-# 4. Add Cucumber configuration file
+# 4. Add Cucumber configuration file => 
 the file where we are going to maintatin configurations related to cucumber features
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
   }
 };
 
-# 5. Adding the folder structure to maintain different components of the framework. 
+# 5. Adding the folder structure to maintain different components of the framework =>
     1.commons ==> To maintain the common methods related to UI, API, Database, and Load Testing related stuff 
     2.config ==> To maintain the configuration data related to UI, API, database, and load testing
     3.screenshots ==> To maintain the screenshots collected during the execution / test  failures
