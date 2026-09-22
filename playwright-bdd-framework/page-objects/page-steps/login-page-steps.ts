@@ -1,7 +1,7 @@
 import {Page} from "@playwright/test";
-import loginPage from "../page-elements/login-page-elements.json";
+import loginPage from '../page-elements/login-page-elements.json' with { type: 'json' };
 import {WebCommons} from "../../commons/ui/web-commons";
-import config from  "../../config/config.json";
+import config from  '../../config/config.json' with { type: 'json' };
 
 export class LoginPageSteps {
 
@@ -9,14 +9,13 @@ export class LoginPageSteps {
     web : WebCommons;
 
     constructor (page : Page) {
-
         this.page = page;
         this.web = new WebCommons(page);
     }
 
     //method to verify application is launched
     async launchApplication(){
-        await this.web.launchapplication(config.app.url);
+        await this.web.launchApplication(config.app.url);
     }
 
     //Method to verify the login page is displayed
@@ -35,6 +34,11 @@ export class LoginPageSteps {
         await this.web.clickElement (loginPage.loginButton);
     }
 
+    //Method to verify forgot password link is displayed in the login page
+    async verifyForgotPasswordLinkIsDisplayed() {
+        await this.web.isElementVisible(loginPage.forgotPasswordLink);
+    }
+    
     //method to click on forgot password link
     async clickOnForgotPasswordLink() {
         await this.web.clickElement (loginPage.forgotPasswordLink);
@@ -42,7 +46,7 @@ export class LoginPageSteps {
 
     //method to verify the forgot password confirmation message is displayed
     async verifyForgotPasswordConfirmationMessageIsDisplayed(){
-        await this.web.isElementVisible(loginPage.forgotPasswordCOnfirmationMsg);
+        await this.web.isElementVisible(loginPage.forgotPasswordConfirmationMsg);
     }
 
     //method to verify error message is displayed for invalid login attempt

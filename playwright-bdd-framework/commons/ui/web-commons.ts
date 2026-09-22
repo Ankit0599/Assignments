@@ -14,7 +14,7 @@ export class WebCommons {
     }
 
     //common method to launch the application and verify the title
-    async launchapplication(url: string, title?: string) {
+    async launchApplication(url: string, title?: string) {
         await this.page.goto(url);
         if (title) {
             await expect(this.page).toHaveTitle(title);
