@@ -1,6 +1,6 @@
 import {Given, When, Then} from "@cucumber/cucumber";
-import {CustomWorld} from "../../support/World";
-import data from "../../testdata/ui/data.json";
+import {CustomWorld} from "../../support/world.js";
+import data from "../../testdata/ui/data.json"  with { type: "json" };
 import { stringify } from "querystring";
 
 //Given Launch the Creatio Application
@@ -91,4 +91,24 @@ Then ('User clicks on the logout button' , async function (this: CustomWorld) {
 //Then Verify user should be logged out successfully
 Then ('Verify user should be logged out successfully' , async function (this: CustomWorld) {
     await this.loginPageSteps.verifyLoginPageIsDisplayed();
+});
+
+//Then Verify the forgot password link is displayed on the login page
+Then ('Verify the forgot password link is displayed on the login page' , async function (this: CustomWorld) {
+    await this.loginPageSteps.verifyForgotPasswordLinkIsDisplayed();
+});
+
+//When User clicks on the forgot password link
+Then ('User clicks on the forgot password link' , async function (this: CustomWorld) {
+    await this.loginPageSteps.clickOnForgotPasswordLink();
+});
+
+//Then forgot password confirmation message should be displayed
+Then ('forgot password confirmation message should be displayed' , async function (this: CustomWorld) {
+    await this.loginPageSteps.verifyForgotPasswordConfirmationMessageIsDisplayed();
+});
+
+//Then Verify the social media login options are displayed on the login page
+Then ('Verify the social media login options are displayed on the login page' , async function (this: CustomWorld) {
+    await this.loginPageSteps.verifySocialMediaLoginOptions();
 });
