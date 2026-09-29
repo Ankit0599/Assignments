@@ -17,9 +17,9 @@ Feature: Creatio login feature
         And User clicks on the login button
         Then Login should be "<status>"
         Examples:
-            | scenario | username                       | password                | status       |
-            | valid    | bharattechacademy6@outlook.com | BharathTechAcademy#1234 | successful   |
-            | invalid  | invaliduser@example.com        | invalidpassword         | unsuccessful |
+            | scenario | username                | password        | status       |
+            | valid    | ankitjeure927@gmail.com | AnkitJeure@0507 | successful   |
+            | invalid  | invaliduser@example.com | invalidpassword | unsuccessful |
 
     Scenario: Verify the forgot password link functionality
         Given The login page is launched
@@ -40,7 +40,7 @@ Feature: Creatio login feature
         And User clicks on the logout button
         Then Verify user should be logged out successfully
         Examples:
-            | scenario | username                       | password                | status     |
-            | valid    | bharattechacademy6@outlook.com | BharathTechAcademy#1234 | successful |
+            | scenario | username                | password        | status     |
+            | valid    | ankitjeure927@gmail.com | AnkitJeure@9278 | successful |
 
 

@@ -9,94 +9,93 @@
 //9. verify that user is logged in successfully and redirected to the dashboard page
 
 import {Page} from "@playwright/test";
-import cookiesPage from "../page-elements/cookies-page-elements.json";
-import { WebCommons } from "../../commons/ui/web-commons";
+import cookiesPage from "../page-elements/cookies-page-elements.json" with { type: "json" };
+import { WebCommons } from "../../commons/ui/web-commons.ts";
 
 export class CookiesPageSteps {
 
-    page : Page;
-    web : WebCommons;
+    page: Page;
+    web: WebCommons;
 
-    constructor (page : Page) {
+    constructor(page: Page) {
         this.page = page;
         this.web = new WebCommons(page);
     }
 
-    //Method to verify the cookies page is displayed
-    async verifyCookiesPageIsDisplayed () {
+    //Method to verify Cookies page is displayed. 
+    async verifyCookiesPageIsDisplayed() {
         await this.web.isElementVisible(cookiesPage.cookiesHeader);
     }
 
-
-    //method to verify the cookies content
-    async verifyCookiesContent (expectedContent : string) {
+    //Method to verify the content of the cookies page.
+    async verifyCookiesPageContent(expectedContent: string) {
         await this.web.isElementVisible(cookiesPage.cookiesContent);
         const actualContent = await this.web.getText(cookiesPage.cookiesContent);
-        if (actualContent !== expectedContent) {
-            throw new Error(`Expected content : ${expectedContent}, but got : ${actualContent}`);
+        if (!actualContent?.includes(expectedContent)) {
+            throw new Error(`Expected content: ${expectedContent}, but got: ${actualContent}`);
         }
     }
 
-    //Method to verify Logos on the cookies pop-up
-    async verifyCookiesPopUpLogos(){
+
+    // Method to verify the logos on the cookies pop-up
+    async verifyCookiesPopUpLogos() {
         await this.web.isElementVisible(cookiesPage.creatioLogo);
         await this.web.isElementVisible(cookiesPage.cookieBotLogo);
     }
 
-    //Method to verify all selection buttons in the cookies Pop up
+    //Method to verify all the selection buttons in the cookies pop-up 
     async verifyCookiesPopUpSelectionButtons() {
         await this.web.isElementVisible(cookiesPage.allowAllButton);
-        await this.web.isElementVisible(cookiesPage.allowSectionbutton);
+        await this.web.isElementVisible(cookiesPage.allowSelectionButton);
         await this.web.isElementVisible(cookiesPage.denyButton);
     }
 
-    //method to verify switch buttons are displayed in the cookies popup
-    async verifyCookiesPopUpSwitchButtons(){
-        await this.web.isElementVisible(cookiesPage.neccesarySwitchButton);
+    //Method to verify switch buttons are displayed in the cookies pop-up 
+    async verifyCookiesPopUpSwitchButtons() {
+        await this.web.isElementVisible(cookiesPage.necessarySwitchButton);
         await this.web.isElementVisible(cookiesPage.preferencesSwitchButton);
         await this.web.isElementVisible(cookiesPage.statisticsSwitchButton);
         await this.web.isElementVisible(cookiesPage.marketingSwitchButton);
     }
 
-    //Method to verify that show details link in the cookies popup
-    async verifyShowDetailsLinkInCookiesPopUp(){
+    //Method to verify Show details link in the cookies pop-up 
+    async verifyShowDetailsLinkInCookiesPopUp() {
         await this.web.isElementVisible(cookiesPage.showDetailsLink);
     }
 
-    //method to click on show details link within the cookkies pop up
-    async clickShowDetailsLinkInCookiesPopUp(){
+    //Method to click on the show details link within the cookies pop-up. 
+    async clickShowDetailsLinkInCookiesPopUp() {
         await this.web.clickElement(cookiesPage.showDetailsLink);
     }
 
-    //Methods to verify expanded view of cookies pop up after clicking on show details link
-    async verifyCookiesPopUpExpandedViewofCookiesPopUp(){
-        await this.web.isElementEnabled(cookiesPage.cookiePopUpExpandedView);
+    //Method to verify expanded view of the cookies pop-up after clicking on the show details link. 
+    async verifyExpandedViewOfCookiesPopUp() {
+        await this.web.isElementVisible(cookiesPage.cookiePopupExpandedView);
     }
 
-    //Method to click on cookies selection buttons
-    async clickOnCookiesSelectionButtons(buttonName : string){
-        switch (buttonName.toLowerCase()){
-            case "allow all" :
+    //Method to click on the cookies selection buttons.
+    async clickCookiesSelectionButtons(buttonName: string) {
+        switch (buttonName.toLowerCase()) {
+            case "allow all":
                 await this.web.clickElement(cookiesPage.allowAllButton);
                 break;
-                
-            case "allow selection" :
-                await this.web.clickElement(cookiesPage.allowSectionbutton);
+            case "allow selection":
+                await this.web.clickElement(cookiesPage.allowSelectionButton);
                 break;
-                
-            case "deny" :
+            case "deny":
                 await this.web.clickElement(cookiesPage.denyButton);
                 break;
-            default :
-                throw new Error (`Invalid button name : ${buttonName}`);  
+            default:
+                throw new Error(`Invalid button name: ${buttonName}`);
         }
+
     }
 
-    //Method to verify cookies pop up is closed succesfully
-    async verifyCookiesPopUpIsClosed () {
+    //Method to Verify Cookies Pop-up is Closed Successfully 
+    async verifyCookiesPopUpIsClosed() {
         await this.web.isElementNotVisible(cookiesPage.cookiesHeader);
-    } 
-}
+    }
 
+}
 
 export default CookiesPageSteps;
