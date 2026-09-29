@@ -4,29 +4,30 @@ import {WebCommons} from "../../commons/ui/web-commons.ts";
 
 export class HomePageSteps {
 
-    page : Page;
-    web : WebCommons;
+    page: Page;
+    web: WebCommons;
 
-    constructor (page : Page) {
+    constructor(page: Page) {
         this.page = page;
         this.web = new WebCommons(page);
     }
-
-    //Method to verify the home page is displayed
-    async verifyHomePageIsDisplayed(){
+    
+    //Method to verify home page is displayed
+    async verifyHomePageIsDisplayed() {
         await this.web.isElementVisible
         await this.web.isElementVisible(homePage.homePageHeaderLink);
     }
 
-    //Method to click on profile icon
-    async clickOnProfileIcon(){
+    //Method to click on the profile icon 
+    async clickProfileIcon() {
         await this.web.clickElement(homePage.profile);
     }
 
-    //Method to click on log out Link
-    async clickOnLogOutButton(){
-        await this.web.clickElement(homePage.logOutButton);
-    }
+    //Method to click on the logout button
+    async clickLogoutButton() {
+        await this.web.clickElement(homePage.logoutLink);
+    }    
+
 }
 
 export default HomePageSteps;

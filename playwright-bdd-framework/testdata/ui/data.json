@@ -4,7 +4,7 @@
     
     "Test Case 8 : To verify user is able to login successfully with valid credentials" : {
         "username": "ankitjeure927@gmail.com",
-        "password":"AnkitJeure@9278"
+        "password":"AnkitJeure@0507"
     },
 
     "Test Case 9 : To verify Error message is displayed for invalid login attempt" : {
@@ -14,7 +14,7 @@
 
     "Test Case 12 : To verify logout functionality within the login page" : {
         "username": "ankitjeure927@gmail.com",
-        "password":"AnkitJeure@9278"
+        "password":"AnkitJeure@0507"
     }
 
 }

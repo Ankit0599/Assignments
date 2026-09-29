@@ -1,6 +1,7 @@
+
 {
-    "homePageHeaderLink" : "span:text-is('Application Hub')",
-    "userLinks" : "span:text-is('User Links')",
-    "profile": "img[alt = 'Contact photo']",
-    "logOutButton": "//span[text()='Log out']"
+    "homePageHeaderLink": "span:text-is('Application Hub')",
+    "usersLink": "span:text-is('Users')",
+    "profile":"img[class*='creatio-header-menu__avatar']",
+    "logoutLink":"text-is('Logout')"
 }

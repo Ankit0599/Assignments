@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "change directory => cd playwright-bdd-framework",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "tests" : "cucumber-js features"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.20.2"
@@ -20,7 +22,7 @@
     "pdf-parse": "^2.4.5",
     "pg": "^8.23.0",
     "ts-node": "^10.9.2",
-    "typescript": "^7.0.2",
+    "typescript": "^5.9.3",
     "xlsx": "^0.18.5"
   }
 }
